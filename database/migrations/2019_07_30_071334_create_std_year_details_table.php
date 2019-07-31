@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateStdParentsTable extends Migration
+class CreateStdYearDetailsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,10 @@ class CreateStdParentsTable extends Migration
      */
     public function up()
     {
-        Schema::create('std_parents', function (Blueprint $table) {
+        Schema::create('std_year_details', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->bigInteger('std_year_id');
             $table->bigInteger('student_id');
-            $table->string('name');
-            $table->string('job');
-            $table->string('tel')->default('blank');
-            $table->string('parent_type');
             $table->timestamps();
         });
     }
@@ -31,6 +28,6 @@ class CreateStdParentsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('std_parents');
+        Schema::dropIfExists('std_year_details');
     }
 }

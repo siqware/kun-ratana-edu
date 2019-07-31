@@ -11,10 +11,12 @@
             </div>
 
             <div class="header-elements d-none">
-                <div class="d-flex justify-content-center">
-                    <a href="{{route('student.index')}}" class="btn btn-link btn-float text-default"><i class="icon-list-numbered text-primary"></i><span>List</span></a>
-                    <a href="{{route('student.create')}}" class="btn btn-link btn-float text-default"><i class="icon-add text-primary"></i> <span>Higher Class</span></a>
-                    <a href="{{route('student.create.lower')}}" class="btn btn-link btn-float text-default"><i class="icon-add text-primary"></i> <span>Lower Class</span></a>
+                <div class="navbar-expand-md navbar-dark bg-teal-400">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a href="{{route('student.index')}}" class="navbar-nav-link {{request()->is('student')? 'active':''}}"><i class="icon-list-numbered mr-2"></i> បញ្ជី</a></li>
+                        <li class="nav-item"><a href="{{route('student.create')}}" class="navbar-nav-link {{request()->is('student/create')? 'active':''}}"><i class="icon-add mr-2"></i> ថ្នាក់ធំ</a></li>
+                        <li class="nav-item"><a href="{{route('student.create.lower')}}" class="navbar-nav-link {{request()->is('student-lower/create')? 'active':''}}"><i class="icon-add mr-2"></i> ថ្នាក់តូច</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -102,7 +104,7 @@
                             {{--Place of birth--}}
                             <div class="form-group row">
                                 <label class="col-lg-3 col-form-label">ទីកន្លែងកំណើត:</label>
-                                <div class="col-lg-9">
+                                <div class="col-lg-9" id="clone_mark_same">
                                     <div class="row">
                                         <div class="col-md-6">
                                             <input type="text" name="pob[village]" value="{{old('pob.village')}}" placeholder="ភូមិ" class="form-control">
@@ -152,8 +154,17 @@
                             </div>
                             {{--Current Address--}}
                             <div class="form-group row">
-                                <label class="col-lg-3 col-form-label">ទីលំនៅបច្ចុប្បន្ន:</label>
-                                <div class="col-lg-9">
+                                <label class="col-lg-3 col-form-label pt-0">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            ទីលំនៅបច្ចុប្បន្ន:
+                                        </div>
+                                        <div class="col-md-6 text-right">
+                                            <button type="button" id="mark_same" class="btn btn-primary">ស្រដៀងគ្នា</button>
+                                        </div>
+                                    </div>
+                                </label>
+                                <div class="col-lg-9" id="get_mark_same">
                                     <div class="row">
                                         <div class="col-md-6">
                                             <input type="text" name="curr_addr[village]" value="{{old('curr_addr.village')}}" placeholder="ភូមិ" class="form-control">
@@ -206,13 +217,18 @@
                                 <label class="col-lg-3 col-form-label">ឪពុក:</label>
                                 <div class="col-lg-9">
                                     <div class="row">
-                                        <div class="col-md-6">
+                                        <div class="col-md-4">
                                             <input type="text" name="parent[father][name]" value="{{old('parent.father.name')}}" placeholder="ឈ្មោះ" class="form-control">
                                         </div>
 
-                                        <div class="col-md-6">
+                                        <div class="col-md-3">
                                             <input type="text" name="parent[father][job]" value="{{old('parent.father.job')}}" placeholder="មុខរបរ" class="form-control">
                                         </div>
+
+                                        <div class="col-md-5">
+                                            <input type="text" name="parent[father][tel]" value="{{old('parent.father.tel')}}" placeholder="លេខទូរស័ព្ទ" class="form-control tagsinput-max-tags">
+                                        </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -221,12 +237,16 @@
                                 <label class="col-lg-3 col-form-label">ម្តាយ:</label>
                                 <div class="col-lg-9">
                                     <div class="row">
-                                        <div class="col-md-6">
+                                        <div class="col-md-4">
                                             <input type="text" name="parent[mother][name]" value="{{old('parent.mother.name')}}" placeholder="ឈ្មោះ" class="form-control">
                                         </div>
 
-                                        <div class="col-md-6">
+                                        <div class="col-md-3">
                                             <input type="text" name="parent[mother][job]" value="{{old('parent.mother.job')}}" placeholder="មុខរបរ" class="form-control">
+                                        </div>
+
+                                        <div class="col-md-5">
+                                            <input type="text" name="parent[mother][tel]" value="{{old('parent.mother.tel')}}" placeholder="លេខទូរស័ព្ទ" class="form-control tagsinput-max-tags">
                                         </div>
                                     </div>
                                 </div>
@@ -237,12 +257,7 @@
                                 <div class="col-lg-9">
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <div class="form-group form-group-feedback form-group-feedback-left">
-                                                <input name="contact[tel]" value="{{old('contact.tel')}}" type="text" class="form-control form-control-lg" placeholder="លេខទូរស័ព្ទ">
-                                                <div class="form-control-feedback form-control-feedback-lg">
-                                                    <i class="icon-mobile"></i>
-                                                </div>
-                                            </div>
+                                            <input name="contact[tel]" value="{{old('contact.tel')}}" type="text" class="form-control tagsinput-max-tags" placeholder="លេខទូរស័ព្ទ">
                                         </div>
 
                                         <div class="col-md-6">
@@ -289,7 +304,16 @@
                                 <div class="col-lg-9">
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <input name="study[former_grade]" value="{{old('study.former_grade')}}" type="text" placeholder="សិស្សថ្នាក់ទី" class="form-control">
+                                            <select name="study[former_grade]" class="form-control form-control-uniform" data-fouc>
+                                                <option value="ថ្នាក់ទី ៦">ជ្រើសថ្នាក់</option>
+                                                <option value="ថ្នាក់ទី ៦">ថ្នាក់ទី ៦</option>
+                                                <option value="ថ្នាក់ទី ៧">ថ្នាក់ទី ៧</option>
+                                                <option value="ថ្នាក់ទី ៨">ថ្នាក់ទី ៨</option>
+                                                <option value="ថ្នាក់ទី ៩">ថ្នាក់ទី ៩</option>
+                                                <option value="ថ្នាក់ទី ១០">ថ្នាក់ទី ១០</option>
+                                                <option value="ថ្នាក់ទី ១១">ថ្នាក់ទី ១១</option>
+                                                <option value="ថ្នាក់ទី ១២">ថ្នាក់ទី ១២</option>
+                                            </select>
                                         </div>
 
                                         <div class="col-md-6">
@@ -298,7 +322,7 @@
                                     </div>
                                     <div class="row mt-2">
                                         <div class="col-md-6">
-                                            <input name="study[card_id]" value="{{old('study.card_id')}}" type="text" placeholder="អត្តលេខ" class="form-control">
+                                            <input name="study[card_id]" disabled value="{{old('study.card_id')}}" type="text" placeholder="អត្តលេខស្វ័យប្រវត្តិ" class="form-control">
                                         </div>
                                     </div>
 
@@ -350,6 +374,18 @@
                                     </div>
                                 </div>
                             </div>
+                            {{--Year of studying--}}
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label">ឆ្នាំសិក្សា:</label>
+                                <div class="col-lg-9">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <input type="text" value="២០២០-២០២១" readonly class="form-control">
+                                            <input type="hidden" name="study_year" value="២០២០-២០២១">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </fieldset>
                     </div>
                 </div>
@@ -367,7 +403,6 @@
     <!-- /form layouts -->
 @stop
 @section('page-script')
-    @routes
     <script>
         console.log('app started')
     </script>
@@ -382,6 +417,7 @@
 @push('page-js')
     <script src="{{asset('dashboard-ui/global_assets/js/plugins/forms/selects/select2.min.js')}}"></script>
     <script src="{{asset('dashboard-ui/global_assets/js/plugins/forms/styling/uniform.min.js')}}"></script>
+    <script src="{{asset('dashboard-ui/global_assets/js/plugins/forms/tags/tagsinput.min.js')}}"></script>
     <script src="{{asset('vendor/laravel-filemanager/js/lfm.js')}}"></script>
     <script src="{{asset('js/pages/student/create.js')}}"></script>
 @endpush

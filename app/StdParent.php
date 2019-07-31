@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class StdParent extends Model
 {
-    protected $fillable = ['name','job','parent_type'];
+    protected $fillable = ['name','job','parent_type','tel'];
 }

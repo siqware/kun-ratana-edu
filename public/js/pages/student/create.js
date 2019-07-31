@@ -12,16 +12,6 @@ var FormLayouts = function() {
 
         // Basic example
         $('.form-control-select2').select2();
-        // Province
-        $('.form-control-select2.province').select2({
-            ajax:{
-                url: function () {
-                    return route('province.json').template
-                },
-            }
-        });
-
-
         //
         // Select with icons
         //
@@ -63,6 +53,17 @@ var FormLayouts = function() {
     var _componentFilePicker = function() {
         $('#lfm').filemanager('file');
     };
+    var _componentTagsinput = function() {
+        if (!$().tagsinput) {
+            console.warn('Warning - tagsinput.min.js is not loaded.');
+            return;
+        }
+        // Set maximum allowed tags
+        $('.tagsinput-max-tags').tagsinput({
+            allowDuplicates:false,
+            maxTags: 2,
+        });
+    };
     //
     // Return objects assigned to module
     //
@@ -72,6 +73,7 @@ var FormLayouts = function() {
             _componentSelect2();
             _componentUniform();
             _componentFilePicker();
+            _componentTagsinput();
         }
     }
 }();
@@ -125,8 +127,18 @@ document.addEventListener('DOMContentLoaded', function() {
             $('#clone-btn-minus').prop('disabled',true);
         })
     };
+    var _markSameClone = function(){
+        $('#mark_same').on('click',function () {
+            $.each($('input[name^="pob"]'),function (key,val) {
+                $('input[name^="curr_addr"]')[key].value = val.value;
+            });
+            var province_val = $('select[name^="pob"]')[0].value;
+            $('select[name="curr_addr[province]"]').val(province_val).trigger('change');
+        });
+    };
     FormLayouts.init();
     _shiftClone();
+    _markSameClone();
     $('.form-check-input-styled').on('click',function () {
         var _domNode = $(this)[0].parentNode.parentNode.parentNode.parentNode.parentNode.parentNode;
         if ($(this).is(':checked')){
@@ -136,5 +148,5 @@ document.addEventListener('DOMContentLoaded', function() {
             $(_domNode).find('select').prop('disabled',true);
             $(_domNode).find('input[type=number],input[type=text]').prop('disabled',true);
         }
-    })
+    });
 });

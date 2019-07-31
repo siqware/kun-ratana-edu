@@ -11,10 +11,12 @@
             </div>
 
             <div class="header-elements d-none">
-                <div class="d-flex justify-content-center">
-                    <a href="{{route('student.index')}}" class="btn btn-link btn-float text-default"><i class="icon-list-numbered text-primary"></i><span>List</span></a>
-                    <a href="{{route('student.create')}}" class="btn btn-link btn-float text-default"><i class="icon-add text-primary"></i> <span>Higher Class</span></a>
-                    <a href="{{route('student.create.lower')}}" class="btn btn-link btn-float text-default"><i class="icon-add text-primary"></i> <span>Lower Class</span></a>
+                <div class="navbar-expand-md navbar-dark bg-teal-400">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a href="{{route('student.index')}}" class="navbar-nav-link {{request()->is('student')? 'active':''}}"><i class="icon-list-numbered mr-2"></i> បញ្ជី</a></li>
+                        <li class="nav-item"><a href="{{route('student.create')}}" class="navbar-nav-link {{request()->is('student/create')? 'active':''}}"><i class="icon-add mr-2"></i> ថ្នាក់ធំ</a></li>
+                        <li class="nav-item"><a href="{{route('student.create.lower')}}" class="navbar-nav-link {{request()->is('student-lower/create')? 'active':''}}"><i class="icon-add mr-2"></i> ថ្នាក់តូច</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -45,13 +47,36 @@
             <tr>
                 <th>Id</th>
                 <th></th>
-                <th>Name</th>
-                <th>Gender</th>
-                <th>Email</th>
-                <th>Role</th>
-                <th>Status</th>
-                <th>Created at</th>
-                <th>Action</th>
+                <th>ឈ្មោះខ្មែរ</th>
+                <th>ឈ្មោះឡាតាំង</th>
+                <th>ភេទ</th>
+                <th>ថ្ងៃខែឆ្នាំកំណើត</th>
+                <th>ថ្ងៃចុះឈ្មោះ</th>
+                <th>ប្រតិបត្តិការ</th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
             </tr>
             </thead>
         </table>
@@ -61,7 +86,11 @@
 @section('page-script')
     @routes
     <script>
-        console.log('app started')
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': '{{csrf_token()}}'
+            }
+        });
     </script>
 @stop
 @section('page-style')
@@ -74,5 +103,5 @@
 @push('page-js')
     <script src="{{asset('dashboard-ui/global_assets/js/plugins/tables/datatables/datatables.min.js')}}"></script>
     <script src="{{asset('dashboard-ui/global_assets/js/plugins/forms/selects/select2.min.js')}}"></script>
-    <script src="{{asset('js/pages/user/index.js')}}"></script>
+    <script src="{{asset('js/pages/student/index.js')}}"></script>
 @endpush

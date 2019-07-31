@@ -32,5 +32,6 @@ Route::get('/user-json-list', 'UserController@user_json_list')->name('user.json.
 */
 Route::resource('/student', 'StudentController');
 Route::get('/student-lower/create', 'StudentController@create_lower')->name('student.create.lower');
+Route::post('/student-higher/view', 'StudentController@show_higher_students')->name('show.higher.student');
 /*Province*/
 Route::get('province','ProvinceController@provinces')->name('province.json');
