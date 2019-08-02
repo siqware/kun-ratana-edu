@@ -7,15 +7,15 @@
         <div class="page-header-content header-elements-md-inline">
             <div class="page-title d-flex">
                 <h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Student</span> - Student List</h4>
-                <a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+                <a href="#" class="ml-auto align-self-center text-default d-md-none" data-toggle="collapse" data-target="#navbar-mobile-top-header"><i class="icon-more"></i></a>
             </div>
 
-            <div class="header-elements d-none">
-                <div class="navbar-expand-md navbar-dark bg-teal-400">
+            <div class="navbar navbar-expand-md navbar-dark bg-teal-400">
+                <div class="collapse navbar-collapse" id="navbar-mobile-top-header">
                     <ul class="navbar-nav">
-                        <li class="nav-item"><a href="{{route('student.index')}}" class="navbar-nav-link {{request()->is('student')? 'active':''}}"><i class="icon-list-numbered mr-2"></i> បញ្ជី</a></li>
-                        <li class="nav-item"><a href="{{route('student.create')}}" class="navbar-nav-link {{request()->is('student/create')? 'active':''}}"><i class="icon-add mr-2"></i> ថ្នាក់ធំ</a></li>
-                        <li class="nav-item"><a href="{{route('student.create.lower')}}" class="navbar-nav-link {{request()->is('student-lower/create')? 'active':''}}"><i class="icon-add mr-2"></i> ថ្នាក់តូច</a></li>
+                    <li class="nav-item"><a href="{{route('student.index')}}" class="navbar-nav-link {{request()->is('student')? 'active':''}}"><i class="icon-list-numbered mr-2"></i> បញ្ជី</a></li>
+                    <li class="nav-item"><a href="{{route('student.create')}}" class="navbar-nav-link {{request()->is('student/create')? 'active':''}}"><i class="icon-add mr-2"></i> ថ្នាក់ធំ</a></li>
+                    <li class="nav-item"><a href="{{route('student.create.lower')}}" class="navbar-nav-link {{request()->is('student-lower/create')? 'active':''}}"><i class="icon-add mr-2"></i> ថ្នាក់តូច</a></li>
                     </ul>
                 </div>
             </div>
@@ -26,6 +26,35 @@
                 <div class="breadcrumb">
                     <a href="{{route('student.index')}}" class="breadcrumb-item"><i class="icon-home2 mr-2"></i> Student</a>
                     <span class="breadcrumb-item active">Student List</span>
+                </div>
+                <a href="#" class="ml-auto align-self-center text-default d-md-none" data-toggle="collapse" data-target="#navbar-mobile-header"><i class="icon-more"></i></a>
+            </div>
+
+            <div class="navbar navbar-expand-md navbar-light header-elements">
+                <div class="collapse navbar-collapse" id="navbar-mobile-header">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a href="#" class="navbar-nav-link dropdown-toggle" data-toggle="dropdown">
+                                <i class="icon-list"></i>
+                                <span class="ml-2">ថ្នាក់ធំ</span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a href="#" class="dropdown-item" data-id="២០១៨-២០១៩">២០១៨-២០១៩</a>
+                                <a href="#" class="dropdown-item" data-id="២០១៩-២០២០">២០១៩-២០២០</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a href="#" class="navbar-nav-link dropdown-toggle" data-toggle="dropdown">
+                                <i class="icon-list"></i>
+                                <span class="ml-2">ថ្នាក់តូច</span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a href="#" class="dropdown-item" data-id="២០១៨-២០១៩">២០១៨-២០១៩</a>
+                                <a href="#" class="dropdown-item" data-id="២០១៩-២០២០">២០១៩-២០២០</a>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -53,7 +82,6 @@
                 <th>ថ្ងៃខែឆ្នាំកំណើត</th>
                 <th>ថ្ងៃចុះឈ្មោះ</th>
                 <th>ប្រតិបត្តិការ</th>
-                <th></th>
                 <th></th>
                 <th></th>
                 <th></th>

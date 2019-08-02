@@ -20,6 +20,7 @@ class CreateStdCurrAddrsTable extends Migration
             $table->string('district');
             $table->string('commune');
             $table->string('province');
+            $table->string('study_year');
             $table->timestamps();
         });
     }

@@ -19,6 +19,7 @@ class CreateStdFormerStudiesTable extends Migration
             $table->string('grade');
             $table->string('school');
             $table->string('card_id');
+            $table->string('study_year');
             $table->timestamps();
         });
     }

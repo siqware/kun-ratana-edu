@@ -20,6 +20,7 @@ class CreateStdParentsTable extends Migration
             $table->string('job');
             $table->string('tel')->default('blank');
             $table->string('parent_type');
+            $table->string('study_year');
             $table->timestamps();
         });
     }

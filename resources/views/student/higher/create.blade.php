@@ -6,16 +6,23 @@
     <div class="page-header page-header-light">
         <div class="page-header-content header-elements-md-inline">
             <div class="page-title d-flex">
-                <h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Student</span> - New Higher Student</h4>
+                <h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Student</span> - New
+                    Higher Student</h4>
                 <a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
             </div>
 
             <div class="header-elements d-none">
                 <div class="navbar-expand-md navbar-dark bg-teal-400">
                     <ul class="navbar-nav">
-                        <li class="nav-item"><a href="{{route('student.index')}}" class="navbar-nav-link {{request()->is('student')? 'active':''}}"><i class="icon-list-numbered mr-2"></i> បញ្ជី</a></li>
-                        <li class="nav-item"><a href="{{route('student.create')}}" class="navbar-nav-link {{request()->is('student/create')? 'active':''}}"><i class="icon-add mr-2"></i> ថ្នាក់ធំ</a></li>
-                        <li class="nav-item"><a href="{{route('student.create.lower')}}" class="navbar-nav-link {{request()->is('student-lower/create')? 'active':''}}"><i class="icon-add mr-2"></i> ថ្នាក់តូច</a></li>
+                        <li class="nav-item"><a href="{{route('student.index')}}"
+                                                class="navbar-nav-link {{request()->is('student')? 'active':''}}"><i
+                                    class="icon-list-numbered mr-2"></i> បញ្ជី</a></li>
+                        <li class="nav-item"><a href="{{route('student.create')}}"
+                                                class="navbar-nav-link {{request()->is('student/create')? 'active':''}}"><i
+                                    class="icon-add mr-2"></i> ថ្នាក់ធំ</a></li>
+                        <li class="nav-item"><a href="{{route('student.create.lower')}}"
+                                                class="navbar-nav-link {{request()->is('student-lower/create')? 'active':''}}"><i
+                                    class="icon-add mr-2"></i> ថ្នាក់តូច</a></li>
                     </ul>
                 </div>
             </div>
@@ -55,8 +62,11 @@
                             <div class="form-group row">
                                 <label class="col-lg-3 col-form-label">ប្រូហ្វាល:</label>
                                 <div class="col-lg-9" id="lfm" data-input="thumbnail" data-preview="holder">
-                                    <img id="holder" class="rounded-circle shadow" src="{{asset('dashboard-ui/global_assets/images/image.png')}}" style="margin-top:15px;max-height:100px;">
-                                    <input id="thumbnail" value="dashboard-ui/global_assets/images/image.png" type="hidden" name="picture">
+                                    <img id="holder" class="rounded-circle shadow"
+                                         src="{{asset('dashboard-ui/global_assets/images/image.png')}}"
+                                         style="margin-top:15px;max-height:100px;">
+                                    <input id="thumbnail" value="dashboard-ui/global_assets/images/image.png"
+                                           type="hidden" name="picture">
                                 </div>
                             </div>
                             {{--Name--}}
@@ -65,11 +75,13 @@
                                 <div class="col-lg-9">
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <input type="text" name="khmer" value="{{old('khmer')}}" placeholder="ខ្មែរ" class="form-control">
+                                            <input type="text" name="khmer" value="{{old('khmer')}}" placeholder="ខ្មែរ"
+                                                   class="form-control">
                                         </div>
 
                                         <div class="col-md-6">
-                                            <input type="text" name="latin" value="{{old('latin')}}" placeholder="ឡាតាំង" class="form-control">
+                                            <input type="text" name="latin" value="{{old('latin')}}"
+                                                   placeholder="ឡាតាំង" class="form-control">
                                         </div>
                                     </div>
                                 </div>
@@ -81,14 +93,16 @@
                                 <div class="col-lg-9">
                                     <div class="form-check form-check-inline">
                                         <label class="form-check-label">
-                                            <input type="radio" {{old('gender')=='ប្រុស'?'checked':''}} value="ប្រុស" class="form-check-input-styled" name="gender" data-fouc>
+                                            <input type="radio" {{old('gender')=='ប្រុស'?'checked':''}} value="ប្រុស"
+                                                   class="form-check-input-styled" name="gender" data-fouc>
                                             ប្រុស
                                         </label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
                                         <label class="form-check-label">
-                                            <input type="radio" {{old('gender')=='ស្រី'?'checked':''}} value="ស្រី" class="form-check-input-styled" name="gender" data-fouc>
+                                            <input type="radio" {{old('gender')=='ស្រី'?'checked':''}} value="ស្រី"
+                                                   class="form-check-input-styled" name="gender" data-fouc>
                                             ស្រី
                                         </label>
                                     </div>
@@ -107,20 +121,24 @@
                                 <div class="col-lg-9" id="clone_mark_same">
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <input type="text" name="pob[village]" value="{{old('pob.village')}}" placeholder="ភូមិ" class="form-control">
+                                            <input type="text" name="pob[village]" value="{{old('pob.village')}}"
+                                                   placeholder="ភូមិ" class="form-control">
                                         </div>
 
                                         <div class="col-md-6">
-                                            <input type="text" name="pob[commune]" value="{{old('pob.commune')}}" placeholder="ឃំុ | សង្កាត់" class="form-control">
+                                            <input type="text" name="pob[commune]" value="{{old('pob.commune')}}"
+                                                   placeholder="ឃំុ | សង្កាត់" class="form-control">
                                         </div>
                                     </div>
                                     <div class="row mt-2">
                                         <div class="col-md-6">
-                                            <input type="text" name="pob[district]" value="{{old('pob.district')}}" placeholder="ស្រុក | ខណ្ឌ" class="form-control">
+                                            <input type="text" name="pob[district]" value="{{old('pob.district')}}"
+                                                   placeholder="ស្រុក | ខណ្ឌ" class="form-control">
                                         </div>
 
                                         <div class="col-md-6">
-                                            <select name="pob[province]" data-placeholder="ជ្រើសរើស ខេត្ត | ក្រុង" class="form-control form-control-select2" data-fouc>
+                                            <select name="pob[province]" data-placeholder="ជ្រើសរើស ខេត្ត | ក្រុង"
+                                                    class="form-control form-control-select2" data-fouc>
                                                 <option></option>
                                                 <option value="Phnom Penh">Phnom Penh </option>
                                                 <option value="Banteay Meanchey">Banteay Meanchey</option>
@@ -160,27 +178,35 @@
                                             ទីលំនៅបច្ចុប្បន្ន:
                                         </div>
                                         <div class="col-md-6 text-right">
-                                            <button type="button" id="mark_same" class="btn btn-primary">ស្រដៀងគ្នា</button>
+                                            <button type="button" id="mark_same" class="btn btn-primary">ស្រដៀងគ្នា
+                                            </button>
                                         </div>
                                     </div>
                                 </label>
                                 <div class="col-lg-9" id="get_mark_same">
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <input type="text" name="curr_addr[village]" value="{{old('curr_addr.village')}}" placeholder="ភូមិ" class="form-control">
+                                            <input type="text" name="curr_addr[village]"
+                                                   value="{{old('curr_addr.village')}}" placeholder="ភូមិ"
+                                                   class="form-control">
                                         </div>
 
                                         <div class="col-md-6">
-                                            <input type="text" name="curr_addr[commune]" value="{{old('curr_addr.commune')}}" placeholder="ឃំុ | សង្កាត់" class="form-control">
+                                            <input type="text" name="curr_addr[commune]"
+                                                   value="{{old('curr_addr.commune')}}" placeholder="ឃំុ | សង្កាត់"
+                                                   class="form-control">
                                         </div>
                                     </div>
                                     <div class="row mt-2">
                                         <div class="col-md-6">
-                                            <input type="text" name="curr_addr[district]" value="{{old('curr_addr.district')}}" placeholder="ស្រុក | ខណ្ឌ" class="form-control">
+                                            <input type="text" name="curr_addr[district]"
+                                                   value="{{old('curr_addr.district')}}" placeholder="ស្រុក | ខណ្ឌ"
+                                                   class="form-control">
                                         </div>
 
                                         <div class="col-md-6">
-                                            <select name="curr_addr[province]" data-placeholder="ជ្រើសរើស ខេត្ត | ក្រុង" class="form-control form-control-select2" data-fouc>
+                                            <select name="curr_addr[province]" data-placeholder="ជ្រើសរើស ខេត្ត | ក្រុង"
+                                                    class="form-control form-control-select2" data-fouc>
                                                 <option></option>
                                                 <option value="Phnom Penh">Phnom Penh </option>
                                                 <option value="Banteay Meanchey">Banteay Meanchey</option>
@@ -218,15 +244,21 @@
                                 <div class="col-lg-9">
                                     <div class="row">
                                         <div class="col-md-4">
-                                            <input type="text" name="parent[father][name]" value="{{old('parent.father.name')}}" placeholder="ឈ្មោះ" class="form-control">
+                                            <input type="text" name="parent[father][name]"
+                                                   value="{{old('parent.father.name')}}" placeholder="ឈ្មោះ"
+                                                   class="form-control">
                                         </div>
 
                                         <div class="col-md-3">
-                                            <input type="text" name="parent[father][job]" value="{{old('parent.father.job')}}" placeholder="មុខរបរ" class="form-control">
+                                            <input type="text" name="parent[father][job]"
+                                                   value="{{old('parent.father.job')}}" placeholder="មុខរបរ"
+                                                   class="form-control">
                                         </div>
 
                                         <div class="col-md-5">
-                                            <input type="text" name="parent[father][tel]" value="{{old('parent.father.tel')}}" placeholder="លេខទូរស័ព្ទ" class="form-control tagsinput-max-tags">
+                                            <input type="text" name="parent[father][tel]"
+                                                   value="{{old('parent.father.tel')}}" placeholder="លេខទូរស័ព្ទ"
+                                                   class="form-control tagsinput-max-tags">
                                         </div>
 
                                     </div>
@@ -238,15 +270,21 @@
                                 <div class="col-lg-9">
                                     <div class="row">
                                         <div class="col-md-4">
-                                            <input type="text" name="parent[mother][name]" value="{{old('parent.mother.name')}}" placeholder="ឈ្មោះ" class="form-control">
+                                            <input type="text" name="parent[mother][name]"
+                                                   value="{{old('parent.mother.name')}}" placeholder="ឈ្មោះ"
+                                                   class="form-control">
                                         </div>
 
                                         <div class="col-md-3">
-                                            <input type="text" name="parent[mother][job]" value="{{old('parent.mother.job')}}" placeholder="មុខរបរ" class="form-control">
+                                            <input type="text" name="parent[mother][job]"
+                                                   value="{{old('parent.mother.job')}}" placeholder="មុខរបរ"
+                                                   class="form-control">
                                         </div>
 
                                         <div class="col-md-5">
-                                            <input type="text" name="parent[mother][tel]" value="{{old('parent.mother.tel')}}" placeholder="លេខទូរស័ព្ទ" class="form-control tagsinput-max-tags">
+                                            <input type="text" name="parent[mother][tel]"
+                                                   value="{{old('parent.mother.tel')}}" placeholder="លេខទូរស័ព្ទ"
+                                                   class="form-control tagsinput-max-tags">
                                         </div>
                                     </div>
                                 </div>
@@ -257,12 +295,14 @@
                                 <div class="col-lg-9">
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <input name="contact[tel]" value="{{old('contact.tel')}}" type="text" class="form-control tagsinput-max-tags" placeholder="លេខទូរស័ព្ទ">
+                                            <input name="contact[tel]" value="{{old('contact.tel')}}" type="text"
+                                                   class="form-control tagsinput-max-tags" placeholder="លេខទូរស័ព្ទ">
                                         </div>
 
                                         <div class="col-md-6">
                                             <div class="form-group form-group-feedback form-group-feedback-left">
-                                                <input name="contact[fb]" value="{{old('contact.fb')}}" type="text" class="form-control form-control-lg" placeholder="ហ្វេសប៊ុក">
+                                                <input name="contact[fb]" value="{{old('contact.fb')}}" type="text"
+                                                       class="form-control form-control-lg" placeholder="ហ្វេសប៊ុក">
                                                 <div class="form-control-feedback form-control-feedback-lg">
                                                     <i class="icon-facebook"></i>
                                                 </div>
@@ -272,7 +312,9 @@
                                     <div class="row mt-2">
                                         <div class="col-md-6">
                                             <div class="form-group form-group-feedback form-group-feedback-left">
-                                                <input name="contact[email]" value="{{old('contact.email')}}" type="text" class="form-control form-control-lg" placeholder="អ៊ីម៉ែល">
+                                                <input name="contact[email]" value="{{old('contact.email')}}"
+                                                       type="text" class="form-control form-control-lg"
+                                                       placeholder="អ៊ីម៉ែល">
                                                 <div class="form-control-feedback form-control-feedback-lg">
                                                     <i class="icon-mail5"></i>
                                                 </div>
@@ -281,7 +323,8 @@
 
                                         <div class="col-md-6">
                                             <div class="form-group form-group-feedback form-group-feedback-left">
-                                                <input name="contact[line]" value="{{old('contact.line')}}" type="text" class="form-control form-control-lg" placeholder="លេខឡាញ">
+                                                <input name="contact[line]" value="{{old('contact.line')}}" type="text"
+                                                       class="form-control form-control-lg" placeholder="លេខឡាញ">
                                                 <div class="form-control-feedback form-control-feedback-lg">
                                                     <i class="icon-bubble-lines3"></i>
                                                 </div>
@@ -304,25 +347,18 @@
                                 <div class="col-lg-9">
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <select name="study[former_grade]" class="form-control form-control-uniform" data-fouc>
-                                                <option value="ថ្នាក់ទី ៦">ជ្រើសថ្នាក់</option>
-                                                <option value="ថ្នាក់ទី ៦">ថ្នាក់ទី ៦</option>
-                                                <option value="ថ្នាក់ទី ៧">ថ្នាក់ទី ៧</option>
-                                                <option value="ថ្នាក់ទី ៨">ថ្នាក់ទី ៨</option>
-                                                <option value="ថ្នាក់ទី ៩">ថ្នាក់ទី ៩</option>
-                                                <option value="ថ្នាក់ទី ១០">ថ្នាក់ទី ១០</option>
-                                                <option value="ថ្នាក់ទី ១១">ថ្នាក់ទី ១១</option>
-                                                <option value="ថ្នាក់ទី ១២">ថ្នាក់ទី ១២</option>
-                                            </select>
+                                            <input type="text" name="study[former_grade]" class="form-control" placeholder="ថ្នាក់ទី">
                                         </div>
 
                                         <div class="col-md-6">
-                                            <input name="study[former_school]" value="{{old('study.former_school')}}" type="text" placeholder="នៃសាលា" class="form-control">
+                                            <input name="study[former_school]" value="{{old('study.former_school')}}"
+                                                   type="text" placeholder="នៃសាលា" class="form-control">
                                         </div>
                                     </div>
                                     <div class="row mt-2">
                                         <div class="col-md-6">
-                                            <input name="study[card_id]" disabled value="{{old('study.card_id')}}" type="text" placeholder="អត្តលេខស្វ័យប្រវត្តិ" class="form-control">
+                                            <input name="study[card_id]" disabled value="{{old('study.card_id')}}"
+                                                   type="text" placeholder="អត្តលេខស្វ័យប្រវត្តិ" class="form-control">
                                         </div>
                                     </div>
 
@@ -333,17 +369,18 @@
                                 <label class="col-lg-3 col-form-label">វេន្តសិក្សា:</label>
                                 <div class="col-lg-9">
                                     <div class="row">
-                                        <div class="col-md-6">
-                                            <select name="shift[time]" class="form-control form-control-uniform" data-fouc>
+                                        <div class="col-md-4">
+                                            <select name="shift[time]" class="form-control form-control-uniform"
+                                                    data-fouc>
                                                 <option value="ព្រឹក">ជ្រើសរើសវេន្ត</option>
                                                 <option value="ព្រឹក">ព្រឹក</option>
                                                 <option value="រសៀល">រសៀល</option>
                                             </select>
                                         </div>
 
-                                        <div class="col-md-6">
-                                            <select name="shift[grade]" class="form-control form-control-uniform" data-fouc name="role">
-                                                <option value="ថ្នាក់ទី ៧">ជ្រើសថ្នាក់</option>
+                                        <div class="col-md-4">
+                                            <select name="shift[grade_type]" class="form-control form-control-uniform" data-fouc name="role">
+                                                <option value="ថ្នាក់ទី ៧">ជ្រើសប្រភេទថ្នាក់</option>
                                                 <option value="ថ្នាក់ទី ៧">ថ្នាក់ទី ៧</option>
                                                 <option value="ថ្នាក់ទី ៨">ថ្នាក់ទី ៨</option>
                                                 <option value="ថ្នាក់ទី ៩">ថ្នាក់ទី ៩</option>
@@ -352,25 +389,61 @@
                                                 <option value="ថ្នាក់ទី ១២">ថ្នាក់ទី ១២</option>
                                             </select>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                            {{--Class Type--}}
-                            <div class="form-group row">
-                                <label class="col-lg-3 col-form-label">ប្រភេទថ្នាក់:</label>
-                                <div class="col-lg-9">
-                                    <div class="form-check form-check-inline">
-                                        <label class="form-check-label">
-                                            <input {{old('shift.study_type')=='ថ្នាក់វិទ្យាសាស្រ្ត'?'checked':''}} type="radio" value="ថ្នាក់វិទ្យាសាស្រ្ត" class="form-check-input-styled" name="shift[study_type]" data-fouc>
-                                            ថ្នាក់វិទ្យាសាស្រ្ត
-                                        </label>
-                                    </div>
 
-                                    <div class="form-check form-check-inline">
-                                        <label class="form-check-label">
-                                            <input {{old('shift.study_type')=='ថ្នាក់វិទ្យាសាស្រ្តសង្គម'?'checked':''}} type="radio" value="ថ្នាក់វិទ្យាសាស្រ្តសង្គម" class="form-check-input-styled" name="shift[study_type]" data-fouc>
-                                            ថ្នាក់វិទ្យាសាស្រ្តសង្គម
-                                        </label>
+                                        <div class="col-md-4">
+                                            <select name="shift[grade]" data-placeholder="ជ្រើសរើសថ្នាក់ទី" class="form-control form-control-select2">
+                                                <option></option>
+                                                <option value="7A">7A</option>
+                                                <option value="7B">7B</option>
+                                                <option value="7C">7C</option>
+                                                <option value="7D">7D</option>
+                                                <option value="7C">7C</option>
+                                                <option value="7D">7D</option>
+                                                <option value="7E">7E</option>
+                                                <option value="7F">7F</option>
+                                                <option value="7G">7G</option>
+
+                                                <option value="8A">8A</option>
+                                                <option value="8B">8B</option>
+                                                <option value="8C">8C</option>
+                                                <option value="8D">8D</option>
+                                                <option value="8C">8C</option>
+                                                <option value="8D">8D</option>
+                                                <option value="8E">8E</option>
+                                                <option value="8F">8F</option>
+
+                                                <option value="9A">9A</option>
+                                                <option value="9B">9B</option>
+                                                <option value="9C">9C</option>
+                                                <option value="9D">9D</option>
+                                                <option value="9C">9C</option>
+                                                <option value="9D">9D</option>
+                                                <option value="9E">9E</option>
+
+                                                <option value="10A">10A</option>
+                                                <option value="10B">10B</option>
+                                                <option value="10C">10C</option>
+                                                <option value="10D">10D</option>
+                                                <option value="10C">10C</option>
+                                                <option value="10D">10D</option>
+                                                <option value="10E">10E</option>
+
+                                                <option value="11A">11A</option>
+                                                <option value="11B">11B</option>
+                                                <option value="11C">11C</option>
+                                                <option value="11D">11D</option>
+                                                <option value="11C">11C</option>
+                                                <option value="11D">11D</option>
+                                                <option value="11E">11E</option>
+
+                                                <option value="12A">12A</option>
+                                                <option value="12B">12B</option>
+                                                <option value="12C">12C</option>
+                                                <option value="12D">12D</option>
+                                                <option value="12C">12C</option>
+                                                <option value="12D">12D</option>
+                                            </select>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -380,8 +453,8 @@
                                 <div class="col-lg-9">
                                     <div class="row">
                                         <div class="col-md-3">
-                                            <input type="text" value="២០២០-២០២១" readonly class="form-control">
-                                            <input type="hidden" name="study_year" value="២០២០-២០២១">
+                                            <input type="text" value="២០១៩-២០២០" readonly class="form-control">
+                                            <input type="hidden" name="study_year" value="២០១៩-២០២០">
                                         </div>
                                     </div>
                                 </div>
@@ -393,7 +466,8 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="text-right">
-                            <button type="submit" class="btn btn-primary">ចុះឈ្មោះ <i class="icon-add ml-2"></i></button>
+                            <button type="submit" class="btn btn-primary">ចុះឈ្មោះ <i class="icon-add ml-2"></i>
+                            </button>
                         </div>
                     </div>
                 </div>

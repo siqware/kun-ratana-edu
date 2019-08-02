@@ -20,6 +20,7 @@ class CreateStdContactsTable extends Migration
             $table->string('fb')->default('NA');
             $table->string('email')->default('NA');
             $table->string('line')->default('NA');
+            $table->string('study_year');
             $table->timestamps();
         });
     }

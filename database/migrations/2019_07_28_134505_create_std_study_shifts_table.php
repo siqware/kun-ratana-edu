@@ -17,8 +17,9 @@ class CreateStdStudyShiftsTable extends Migration
             $table->bigIncrements('id');
             $table->bigInteger('student_id');
             $table->string('time');
+            $table->string('grade_type');
             $table->string('grade');
-            $table->string('study_type');
+            $table->string('study_year');
             $table->timestamps();
         });
     }

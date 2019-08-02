@@ -86,12 +86,11 @@ var DatatableBasic = function() {
                 { data: 'students.show_former_study.card_id', name: 'students.show_former_study.card_id' },
 
                 { data: 'students.show_shift.time', name: 'students.show_shift.time' },
-                { data: 'students.show_shift.grade', name: 'students.show_shift.grade' },
-                { data: 'students.show_shift.study_type', name: 'students.show_shift.study_type' },
+                { data: 'students.show_shift.grade', name: 'students.show_shift.grade' }
             ],
             "columnDefs": [
                 { className: "text-center", "targets": [ 0,7 ] },
-                {"targets": [ 8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31 ], "visible": false, "searchable": true},
+                {"targets": [ 8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30 ], "visible": false, "searchable": true},
             ]
         });
 
