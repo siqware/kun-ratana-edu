@@ -188,6 +188,14 @@ class StudentController extends Controller
                     ]);
                 }
             }
+            /*pob*/
+            $pob = [
+                'village'=>$value['pob_village'],
+                'commune'=>$value['pob_commune'],
+                'district'=>$value['pob_district'],
+                'province'=>$value['pob_province'],
+            ];
+            $student->pob()->create($pob);
             /*current address*/
             $curr_addr = [
                 'village'=>$value['curr_village'],
