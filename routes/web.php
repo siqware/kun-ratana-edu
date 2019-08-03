@@ -32,7 +32,7 @@ Route::get('/user-json-list', 'UserController@user_json_list')->name('user.json.
 */
 Route::resource('/student', 'StudentController');
 Route::get('/student-lower/create', 'StudentController@create_lower')->name('student.create.lower');
-Route::post('/student-higher/view', 'StudentController@show_higher_students')->name('show.higher.student');
+Route::post('/student-higher/view/{id}', 'StudentController@show_higher_students')->name('show.higher.student');
 /*Student import*/
 Route::get('/student-import', 'StudentController@excel_import_index')->name('student.higher.index');
 Route::post('/student-import-store', 'StudentController@excel_import')->name('student.higher.store');

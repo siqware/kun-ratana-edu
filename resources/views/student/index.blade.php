@@ -39,19 +39,8 @@
                                 <span class="ml-2">ថ្នាក់ធំ</span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right">
-                                <a href="#" class="dropdown-item" data-id="២០១៨-២០១៩">២០១៨-២០១៩</a>
-                                <a href="#" class="dropdown-item" data-id="២០១៩-២០២០">២០១៩-២០២០</a>
-                            </div>
-                        </li>
-
-                        <li class="nav-item dropdown">
-                            <a href="#" class="navbar-nav-link dropdown-toggle" data-toggle="dropdown">
-                                <i class="icon-list"></i>
-                                <span class="ml-2">ថ្នាក់តូច</span>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right">
-                                <a href="#" class="dropdown-item" data-id="២០១៨-២០១៩">២០១៨-២០១៩</a>
-                                <a href="#" class="dropdown-item" data-id="២០១៩-២០២០">២០១៩-២០២០</a>
+                                <a href="#" class="dropdown-item" id="btn_by_year" data-id="1">២០១៨-២០១៩</a>
+                                <a href="#" class="dropdown-item" id="btn_by_year" data-id="2">២០១៩-២០២០</a>
                             </div>
                         </li>
                     </ul>

@@ -249,8 +249,8 @@ class StudentController extends Controller
             $student->shift()->create($shift);
         }
     }
-    public function show_higher_students(){
-        $student_by_year = StdYearDetail::with('students')->where('std_year_id',2)->get();
+    public function show_higher_students($id){
+        $student_by_year = StdYearDetail::with('students')->where('std_year_id',$id)->get();
         return Datatables::of($student_by_year)
             ->editColumn('students.profile',function ($picture){
                 return '<img src="'.asset($picture->students->profile).'" width="35" height="35" class="rounded-circle">';
