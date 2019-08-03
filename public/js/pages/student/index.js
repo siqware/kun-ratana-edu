@@ -38,8 +38,8 @@ var DatatableBasic = function() {
         });
 
         // Scrollable datatable
-        var url = route('show.higher.student',2).template;
-        url = url.replace('{id}',2);
+        var url = route('show.higher.student',1).template;
+        url = url.replace('{id}',1);
         var table = $('.datatable-scroll-y').DataTable({
             destroy:true,
             autoWidth: true,

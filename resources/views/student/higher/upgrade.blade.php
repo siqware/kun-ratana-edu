@@ -137,7 +137,7 @@
                                         </div>
 
                                         <div class="col-md-6">
-                                            <select readonly name="pob[province]" data-placeholder="ជ្រើសរើស ខេត្ត | ក្រុង"
+                                            <select disabled readonly name="pob[province]" data-placeholder="ជ្រើសរើស ខេត្ត | ក្រុង"
                                                     class="form-control form-control-select2" data-fouc>
                                                 <option></option>
                                                 <option value="{{$value->show_pob->village}}" selected>{{$value->show_pob->province}}</option>
