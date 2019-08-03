@@ -25,7 +25,6 @@ class StudentController extends Controller
             'khmer' => 'required',
             'gender' => 'required',
             'dob' => 'required',
-            'pob.*' => 'required',
             'curr_addr.*' => 'required',
             'parent.*.name' => 'required',
             'parent.*.job' => 'required',
@@ -67,14 +66,6 @@ class StudentController extends Controller
                 ]);
             }
         }
-        /*pob*/
-        $pob = [
-            'village'=>$input['pob']['village'],
-            'commune'=>$input['pob']['commune'],
-            'district'=>$input['pob']['district'],
-            'province'=>$input['pob']['province'],
-        ];
-        $student->pob()->create($pob);
         /*current address*/
         $curr_addr = [
             'village'=>$input['curr_addr']['village'],
