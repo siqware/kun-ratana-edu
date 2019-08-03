@@ -4,9 +4,6 @@
     <list default="true" id="33ada014-aedf-4ea1-b013-8cc083af894a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/StudentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/StudentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/pages/student/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/pages/student/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/student/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/student/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,11 +30,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/StudentController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="251" column="46" selection-start-line="251" selection-start-column="46" selection-end-line="251" selection-end-column="46" />
+            <state relative-caret-position="257">
+              <caret line="190" column="31" lean-forward="true" selection-start-line="190" selection-start-column="31" selection-end-line="190" selection-end-column="31" />
               <folding>
                 <element signature="e#40#56#0#PHP" expanded="true" />
               </folding>
@@ -84,11 +81,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/pages/student/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="131" column="30" lean-forward="true" selection-start-line="131" selection-start-column="30" selection-end-line="131" selection-end-column="30" />
+            <state relative-caret-position="239">
+              <caret line="128" column="38" lean-forward="true" selection-start-line="128" selection-start-column="38" selection-end-line="128" selection-end-column="38" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#1608#4998#0" />
@@ -223,10 +220,10 @@
         <option value="$PROJECT_DIR$/resources/views/student/import.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/student/higher/upgrade.blade.php" />
         <option value="$PROJECT_DIR$/app/Student.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/StudentController.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/resources/views/student/index.blade.php" />
         <option value="$PROJECT_DIR$/public/js/pages/student/index.js" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/StudentController.php" />
       </list>
     </option>
   </component>
@@ -425,15 +422,16 @@
       <workItem from="1564713738907" duration="12743000" />
       <workItem from="1564733285570" duration="234000" />
       <workItem from="1564749893189" duration="593000" />
-      <workItem from="1564800108807" duration="2459000" />
+      <workItem from="1564800108807" duration="3148000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119199000" />
+    <option name="totallyTimeSpent" value="119888000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="28" width="1366" height="740" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.37727273" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -787,16 +785,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/StudentController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="251" column="46" selection-start-line="251" selection-start-column="46" selection-end-line="251" selection-end-column="46" />
-          <folding>
-            <element signature="e#40#56#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="197">
@@ -816,11 +804,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/pages/student/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="131" column="30" lean-forward="true" selection-start-line="131" selection-start-column="30" selection-end-line="131" selection-end-column="30" />
+        <state relative-caret-position="239">
+          <caret line="128" column="38" lean-forward="true" selection-start-line="128" selection-start-column="38" selection-end-line="128" selection-end-column="38" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#1608#4998#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/StudentController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="190" column="31" lean-forward="true" selection-start-line="190" selection-start-column="31" selection-end-line="190" selection-end-column="31" />
+          <folding>
+            <element signature="e#40#56#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
