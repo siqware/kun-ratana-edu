@@ -1,12 +1,12 @@
 @extends('dashboard.layout')
 @section('page-title')
-    User
+    បញ្ជីសិស្ស
 @stop
 @section('page-header')
     <div class="page-header page-header-light">
         <div class="page-header-content header-elements-md-inline">
             <div class="page-title d-flex">
-                <h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Student</span> - Student List</h4>
+                <h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">សិស្ស</span> - បញ្ជីសិស្ស</h4>
                 <a href="#" class="ml-auto align-self-center text-default d-md-none" data-toggle="collapse" data-target="#navbar-mobile-top-header"><i class="icon-more"></i></a>
             </div>
 
@@ -24,8 +24,8 @@
         <div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
             <div class="d-flex">
                 <div class="breadcrumb">
-                    <a href="{{route('student.index')}}" class="breadcrumb-item"><i class="icon-home2 mr-2"></i> Student</a>
-                    <span class="breadcrumb-item active">Student List</span>
+                    <a href="{{route('student.index')}}" class="breadcrumb-item"><i class="icon-home2 mr-2"></i> សិស្ស</a>
+                    <span class="breadcrumb-item active">បញ្ជីសិស្ស</span>
                 </div>
                 <a href="#" class="ml-auto align-self-center text-default d-md-none" data-toggle="collapse" data-target="#navbar-mobile-header"><i class="icon-more"></i></a>
             </div>
@@ -53,7 +53,7 @@
     <!-- Scrollable datatable -->
     <div class="card">
         <div class="card-header header-elements-inline">
-            <h5 class="card-title">Student List</h5>
+            <h5 class="card-title">បញ្ជីសិស្សសម្រាប់ឆ្នាំសិក្សា (<span id="year_study">២០១៨-២០១៩</span>)</h5>
             <div class="header-elements">
                 <div class="list-icons">
                     <a class="list-icons-item" data-action="collapse"></a>

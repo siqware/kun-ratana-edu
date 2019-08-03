@@ -368,7 +368,7 @@
                                 <div class="col-lg-9">
                                     <div class="row">
                                         <div class="col-md-4">
-                                            <select name="shift[time]" class="form-control form-control-uniform"
+                                            <select required name="shift[time]" class="form-control form-control-uniform"
                                                     data-fouc>
                                                 <option value="ព្រឹក">ជ្រើសរើសវេន្ត</option>
                                                 <option value="ព្រឹក">ព្រឹក</option>
@@ -377,7 +377,7 @@
                                         </div>
 
                                         <div class="col-md-4">
-                                            <select name="shift[grade_type]" class="form-control form-control-uniform" data-fouc name="role">
+                                            <select required name="shift[grade_type]" class="form-control form-control-uniform" data-fouc>
                                                 <option value="ថ្នាក់ទី ៧">ជ្រើសប្រភេទថ្នាក់</option>
                                                 <option value="ថ្នាក់ទី ៧">ថ្នាក់ទី ៧</option>
                                                 <option value="ថ្នាក់ទី ៨">ថ្នាក់ទី ៨</option>
@@ -389,7 +389,7 @@
                                         </div>
 
                                         <div class="col-md-4">
-                                            <select name="shift[grade]" data-placeholder="ជ្រើសរើសថ្នាក់ទី" class="form-control form-control-select2">
+                                            <select required name="shift[grade]" data-placeholder="ជ្រើសរើសថ្នាក់ទី" class="form-control form-control-select2">
                                                 <option></option>
                                                 <option value="7A">7A</option>
                                                 <option value="7B">7B</option>

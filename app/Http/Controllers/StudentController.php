@@ -129,6 +129,9 @@ class StudentController extends Controller
             'study_year'=>$input['study_year']
         ];
         $student->shift()->create($shift);
+        if ($student){
+            return redirect(route('student.index'));
+        }
     }
     /*upgrade higher student index*/
     public function student_higher_upgrade_show($id)
@@ -426,6 +429,9 @@ class StudentController extends Controller
             'study_year'=>$input['study_year']
         ];
         $student->shift()->create($shift);
+        if ($student){
+            return redirect(route('student.index'));
+        }
     }
 
     /**

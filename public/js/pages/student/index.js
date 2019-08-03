@@ -120,9 +120,14 @@ var DatatableBasic = function() {
     //Get ID
     var _selectByYear = function() {
         $(document).on('click','#btn_by_year',function () {
+            var byYearId = parseInt($(this).attr('data-id'));
+            if (byYearId===1){
+                $('#year_study').html('២០១៨-២០១៩');
+            }else if (byYearId===2){
+                $('#year_study').html('២០១៩-២០២០');
+            }
             $(this).toggleClass('active');
             $(this).siblings().removeClass('active');
-            var byYearId = parseInt($(this).attr('data-id'));
             // Scrollable datatable
             var url = route('show.higher.student',byYearId).template;
             url = url.replace('{id}',byYearId);

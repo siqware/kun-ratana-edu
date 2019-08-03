@@ -5,7 +5,7 @@
         <a href="#" class="sidebar-mobile-main-toggle">
             <i class="icon-arrow-left8"></i>
         </a>
-        Navigation
+        មីនុយ
         <a href="#" class="sidebar-mobile-expand">
             <i class="icon-screen-full"></i>
             <i class="icon-screen-normal"></i>
@@ -26,9 +26,9 @@
                     </div>
 
                     <div class="media-body">
-                        <div class="media-title font-weight-semibold">Kun Ratana</div>
+                        <div class="media-title font-weight-semibold">គុណ រតនា</div>
                         <div class="font-size-xs opacity-50">
-                            <i class="icon-pin font-size-sm"></i> &nbsp;Poi Pet
+                            <i class="icon-pin font-size-sm"></i> &nbsp;ប៉ោយប៉ែត
                         </div>
                     </div>
 
@@ -46,36 +46,36 @@
             <ul class="nav nav-sidebar" data-nav-type="accordion">
 
                 <!-- Main -->
-                <li class="nav-item-header"><div class="text-uppercase font-size-xs line-height-xs">Main</div> <i class="icon-menu" title="Main"></i></li>
+                <li class="nav-item-header"><div class="text-uppercase font-size-xs line-height-xs">មីនុយ</div> <i class="icon-menu" title="Main"></i></li>
                 <li class="nav-item">
                     <a href="{{route('dashboard')}}" class="nav-link {{request()->is('/')? 'active':''}}">
                         <i class="icon-home4"></i>
-                        <span>Dashboard</span>
+                        <span>ទំព័រដើម</span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="{{route('student.index')}}" class="nav-link {{request()->is('student*')? 'active':''}}">
                         <i class="icon-people"></i>
-                        <span>Student</span>
+                        <span>សិស្ស</span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="{{route('media')}}" class="nav-link {{request()->is('media')? 'active':''}}">
                         <i class="icon-images2"></i>
-                        <span>Media</span>
+                        <span>មេឌៀ</span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="{{route('user.index')}}" class="nav-link {{request()->is('user*')? 'active':''}}">
                         <i class="icon-users"></i>
-                        <span>User</span>
+                        <span>អ្នកប្រើប្រាស់</span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="layout_1/LTR/default/full/changelog.html" class="nav-link">
                         <i class="icon-bell-plus"></i>
-                        <span>Media</span>
-                        <span class="badge bg-pink-400 align-self-center ml-auto">5</span>
+                        <span>ជូនដំណឹង</span>
+                        <span class="badge bg-pink-400 align-self-center ml-auto">៥</span>
                     </a>
                 </li>
                 <!-- /main -->

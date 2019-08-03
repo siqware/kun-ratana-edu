@@ -1,13 +1,12 @@
 @extends('dashboard.layout')
 @section('page-title')
-    New Student
+    បន្ថែមសិស្ស អនុ និងវិទ្យាល័យ
 @stop
 @section('page-header')
     <div class="page-header page-header-light">
         <div class="page-header-content header-elements-md-inline">
             <div class="page-title d-flex">
-                <h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Student</span> - New
-                    Higher Student</h4>
+                <h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">សិស្ស</span> - បន្ថែមសិស្សអនុ | វិទ្យាល័យ</h4>
                 <a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
             </div>
 
@@ -31,8 +30,8 @@
         <div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
             <div class="d-flex">
                 <div class="breadcrumb">
-                    <a href="{{route('student.index')}}" class="breadcrumb-item"><i class="icon-home2 mr-2"></i> Student</a>
-                    <span class="breadcrumb-item active">New Higher Student</span>
+                    <a href="{{route('student.index')}}" class="breadcrumb-item"><i class="icon-home2 mr-2"></i> សិស្ស</a>
+                    <span class="breadcrumb-item active">បន្ថែមសិស្សអនុ | វិទ្យាល័យ</span>
                 </div>
             </div>
         </div>
@@ -75,7 +74,7 @@
                                 <div class="col-lg-9">
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <input type="text" name="khmer" value="{{old('khmer')}}" placeholder="ខ្មែរ"
+                                            <input required type="text" name="khmer" value="{{old('khmer')}}" placeholder="ខ្មែរ"
                                                    class="form-control">
                                         </div>
 
@@ -93,7 +92,7 @@
                                 <div class="col-lg-9">
                                     <div class="form-check form-check-inline">
                                         <label class="form-check-label">
-                                            <input type="radio" {{old('gender')=='ប្រុស'?'checked':''}} value="ប្រុស"
+                                            <input required type="radio" {{old('gender')=='ប្រុស'?'checked':''}} value="ប្រុស"
                                                    class="form-check-input-styled" name="gender" data-fouc>
                                             ប្រុស
                                         </label>
@@ -101,7 +100,7 @@
 
                                     <div class="form-check form-check-inline">
                                         <label class="form-check-label">
-                                            <input type="radio" {{old('gender')=='ស្រី'?'checked':''}} value="ស្រី"
+                                            <input required type="radio" {{old('gender')=='ស្រី'?'checked':''}} value="ស្រី"
                                                    class="form-check-input-styled" name="gender" data-fouc>
                                             ស្រី
                                         </label>
@@ -112,7 +111,7 @@
                             <div class="form-group row">
                                 <label class="col-lg-3 col-form-label">ថ្ងៃខែឆ្នាំកំណើត:</label>
                                 <div class="col-lg-9">
-                                    <input type="date" name="dob" value="{{old('dob')}}" class="form-control">
+                                    <input required type="date" name="dob" value="{{old('dob')}}" class="form-control">
                                 </div>
                             </div>
                             {{--Place of birth--}}
@@ -121,23 +120,23 @@
                                 <div class="col-lg-9" id="clone_mark_same">
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <input type="text" name="pob[village]" value="{{old('pob.village')}}"
+                                            <input required type="text" name="pob[village]" value="{{old('pob.village')}}"
                                                    placeholder="ភូមិ" class="form-control">
                                         </div>
 
                                         <div class="col-md-6">
-                                            <input type="text" name="pob[commune]" value="{{old('pob.commune')}}"
+                                            <input required type="text" name="pob[commune]" value="{{old('pob.commune')}}"
                                                    placeholder="ឃំុ | សង្កាត់" class="form-control">
                                         </div>
                                     </div>
                                     <div class="row mt-2">
                                         <div class="col-md-6">
-                                            <input type="text" name="pob[district]" value="{{old('pob.district')}}"
+                                            <input required type="text" name="pob[district]" value="{{old('pob.district')}}"
                                                    placeholder="ស្រុក | ខណ្ឌ" class="form-control">
                                         </div>
 
                                         <div class="col-md-6">
-                                            <select name="pob[province]" data-placeholder="ជ្រើសរើស ខេត្ត | ក្រុង"
+                                            <select required name="pob[province]" data-placeholder="ជ្រើសរើស ខេត្ត | ក្រុង"
                                                     class="form-control form-control-select2" data-fouc>
                                                 <option></option>
                                                 <option value="Phnom Penh">Phnom Penh </option>
@@ -186,26 +185,26 @@
                                 <div class="col-lg-9" id="get_mark_same">
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <input type="text" name="curr_addr[village]"
+                                            <input required type="text" name="curr_addr[village]"
                                                    value="{{old('curr_addr.village')}}" placeholder="ភូមិ"
                                                    class="form-control">
                                         </div>
 
                                         <div class="col-md-6">
-                                            <input type="text" name="curr_addr[commune]"
+                                            <input required type="text" name="curr_addr[commune]"
                                                    value="{{old('curr_addr.commune')}}" placeholder="ឃំុ | សង្កាត់"
                                                    class="form-control">
                                         </div>
                                     </div>
                                     <div class="row mt-2">
                                         <div class="col-md-6">
-                                            <input type="text" name="curr_addr[district]"
+                                            <input required type="text" name="curr_addr[district]"
                                                    value="{{old('curr_addr.district')}}" placeholder="ស្រុក | ខណ្ឌ"
                                                    class="form-control">
                                         </div>
 
                                         <div class="col-md-6">
-                                            <select name="curr_addr[province]" data-placeholder="ជ្រើសរើស ខេត្ត | ក្រុង"
+                                            <select required name="curr_addr[province]" data-placeholder="ជ្រើសរើស ខេត្ត | ក្រុង"
                                                     class="form-control form-control-select2" data-fouc>
                                                 <option></option>
                                                 <option value="Phnom Penh">Phnom Penh </option>
@@ -244,13 +243,13 @@
                                 <div class="col-lg-9">
                                     <div class="row">
                                         <div class="col-md-4">
-                                            <input type="text" name="parent[father][name]"
+                                            <input required type="text" name="parent[father][name]"
                                                    value="{{old('parent.father.name')}}" placeholder="ឈ្មោះ"
                                                    class="form-control">
                                         </div>
 
                                         <div class="col-md-3">
-                                            <input type="text" name="parent[father][job]"
+                                            <input required type="text" name="parent[father][job]"
                                                    value="{{old('parent.father.job')}}" placeholder="មុខរបរ"
                                                    class="form-control">
                                         </div>
@@ -270,13 +269,13 @@
                                 <div class="col-lg-9">
                                     <div class="row">
                                         <div class="col-md-4">
-                                            <input type="text" name="parent[mother][name]"
+                                            <input required type="text" name="parent[mother][name]"
                                                    value="{{old('parent.mother.name')}}" placeholder="ឈ្មោះ"
                                                    class="form-control">
                                         </div>
 
                                         <div class="col-md-3">
-                                            <input type="text" name="parent[mother][job]"
+                                            <input required type="text" name="parent[mother][job]"
                                                    value="{{old('parent.mother.job')}}" placeholder="មុខរបរ"
                                                    class="form-control">
                                         </div>
@@ -295,7 +294,7 @@
                                 <div class="col-lg-9">
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <input name="contact[tel]" value="{{old('contact.tel')}}" type="text"
+                                            <input required name="contact[tel]" value="{{old('contact.tel')}}" type="text"
                                                    class="form-control tagsinput-max-tags" placeholder="លេខទូរស័ព្ទ">
                                         </div>
 
@@ -347,11 +346,11 @@
                                 <div class="col-lg-9">
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <input type="text" name="study[former_grade]" class="form-control" placeholder="ថ្នាក់ទី">
+                                            <input required type="text" name="study[former_grade]" class="form-control" placeholder="ថ្នាក់ទី">
                                         </div>
 
                                         <div class="col-md-6">
-                                            <input name="study[former_school]" value="{{old('study.former_school')}}"
+                                            <input required name="study[former_school]" value="{{old('study.former_school')}}"
                                                    type="text" placeholder="នៃសាលា" class="form-control">
                                         </div>
                                     </div>
@@ -370,7 +369,7 @@
                                 <div class="col-lg-9">
                                     <div class="row">
                                         <div class="col-md-4">
-                                            <select name="shift[time]" class="form-control form-control-uniform"
+                                            <select required name="shift[time]" class="form-control form-control-uniform"
                                                     data-fouc>
                                                 <option value="ព្រឹក">ជ្រើសរើសវេន្ត</option>
                                                 <option value="ព្រឹក">ព្រឹក</option>
@@ -379,7 +378,7 @@
                                         </div>
 
                                         <div class="col-md-4">
-                                            <select name="shift[grade_type]" class="form-control form-control-uniform" data-fouc name="role">
+                                            <select required name="shift[grade_type]" class="form-control form-control-uniform" data-fouc>
                                                 <option value="ថ្នាក់ទី ៧">ជ្រើសប្រភេទថ្នាក់</option>
                                                 <option value="ថ្នាក់ទី ៧">ថ្នាក់ទី ៧</option>
                                                 <option value="ថ្នាក់ទី ៨">ថ្នាក់ទី ៨</option>
@@ -391,7 +390,7 @@
                                         </div>
 
                                         <div class="col-md-4">
-                                            <select name="shift[grade]" data-placeholder="ជ្រើសរើសថ្នាក់ទី" class="form-control form-control-select2">
+                                            <select required name="shift[grade]" data-placeholder="ជ្រើសរើសថ្នាក់ទី" class="form-control form-control-select2">
                                                 <option></option>
                                                 <option value="7A">7A</option>
                                                 <option value="7B">7B</option>
