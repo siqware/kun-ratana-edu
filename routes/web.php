@@ -38,5 +38,8 @@ Route::get('/student-import', 'StudentController@excel_import_index')->name('stu
 Route::post('/student-import-store', 'StudentController@excel_import')->name('student.higher.store');
 Route::get('/student-higher-upgrade/{id}', 'StudentController@student_higher_upgrade_show')->name('student.higher.upgrade.show');
 Route::put('/student-higher-upgrade/{id}', 'StudentController@student_higher_upgrade_store')->name('student.higher.upgrade');
+/*bulk upgrade*/
+Route::get('/student-higher-bulk-upgrade', 'StudentController@student_higher_bulk_upgrade_index')->name('student.higher.bulk.upgrade.index');
+Route::get('/student-higher-bulk-upgrade-json/{id}', 'StudentController@show_higher_students_bulk_check')->name('student.higher.bulk.upgrade.json');
 /*Province*/
 Route::get('province','ProvinceController@provinces')->name('province.json');

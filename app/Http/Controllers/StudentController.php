@@ -15,6 +15,29 @@ use Yajra\DataTables\DataTables;
 
 class StudentController extends Controller
 {
+    /*student higher bulk upgrade index*/
+    public function student_higher_bulk_upgrade_index(){
+        return view('student.higher.bulk_upgrade');
+    }
+    /*show higher student bulk check*/
+    public function show_higher_students_bulk_check($id){
+        $student_by_year = StdYearDetail::with('students')->where('std_year_id',$id)->get();
+        return Datatables::of($student_by_year)
+            ->editColumn('students.profile',function ($picture){
+                return '<img src="'.asset($picture->students->profile).'" width="35" height="35" class="rounded-circle">';
+            })
+            ->editColumn('students.created_at',function ($date){
+                return Carbon::parse($date->students->created_at)->format('d-m-Y');
+            })
+            ->editColumn('students.dob',function ($date){
+                return Carbon::parse($date->students->dob)->format('d-m-Y');
+            })
+            ->addColumn('check_box',function ($check){
+                return '<input name="student[]" type="checkbox" class="form-check-input-styled" class="form-control" value="'.$check->students->id.'">';
+            })
+            ->rawColumns(['students.profile','check_box'])
+            ->make(true);
+    }
     /*upgrade higher student store*/
     public function student_higher_upgrade_store(Request $request, $id)
     {

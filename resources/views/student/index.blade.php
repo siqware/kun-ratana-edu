@@ -33,12 +33,25 @@
             <div class="navbar navbar-expand-md navbar-light header-elements">
                 <div class="collapse navbar-collapse" id="navbar-mobile-header">
                     <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="{{route('student.higher.bulk.upgrade.index')}}" class="navbar-nav-link {{request()->is('student-higher-bulk-upgrade')? 'active':''}}">
+                                <i class="icon-move-up"></i>
+                                <span class="ml-2">តម្លើងឆ្នាំសិក្សាតាមថ្នាក់</span>
+                            </a>
+                        </li>
                         <li class="nav-item dropdown">
                             <a href="#" class="navbar-nav-link dropdown-toggle" data-toggle="dropdown">
                                 <i class="icon-list"></i>
-                                <span class="ml-2">ថ្នាក់ធំ</span>
+                                <span class="ml-2">បង្ហាញតាមឆ្នាំសិក្សា</span>
                             </a>
-                            <div class="dropdown-menu dropdown-menu-right">
+                            <div class="dropdown-menu dropdown-menu-right pt-0">
+                                <a class="dropdown-item">ថ្នាក់ធំ</a>
+                                <div class="dropdown-divider m-0"></div>
+                                <a href="#" class="dropdown-item" id="btn_by_year" data-id="1">២០១៨-២០១៩</a>
+                                <a href="#" class="dropdown-item" id="btn_by_year" data-id="2">២០១៩-២០២០</a>
+                                <div class="dropdown-divider m-0"></div>
+                                <a class="dropdown-item m-0">ថ្នាក់តូច</a>
+                                <div class="dropdown-divider m-0"></div>
                                 <a href="#" class="dropdown-item" id="btn_by_year" data-id="1">២០១៨-២០១៩</a>
                                 <a href="#" class="dropdown-item" id="btn_by_year" data-id="2">២០១៩-២០២០</a>
                             </div>
@@ -70,8 +83,8 @@
                 <th>ភេទ</th>
                 <th>ថ្ងៃខែឆ្នាំកំណើត</th>
                 <th>ថ្ងៃចុះឈ្មោះ</th>
+                <th>ថ្នាក់ទី</th>
                 <th>ប្រតិបត្តិការ</th>
-                <th></th>
                 <th></th>
                 <th></th>
                 <th></th>
